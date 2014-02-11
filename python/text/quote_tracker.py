@@ -6,6 +6,7 @@ checked. For CLI, show whether the stock has moved up or down.
 """
 
 import urllib.request
+import csv
 
 def request_from_yahoo(stocks):
     """
@@ -24,8 +25,14 @@ def main():
     csv_string = request_from_yahoo(stocks)
     csv_array = csv_string.decode('utf-8').strip().split('\r\n')
     print('Format: Stock Symbol, Stock Name, Last Trade Price, Change')
-    for row in csv_array:
-        print(row)
+    for row in csv.reader(csv_array):
+        if row[-1][0] == '+':
+            print('\033[92m', end='')
+        else:
+            print('\033[91m', end='')
+        for col in row:
+            print(col + ',', end='')
+        print()
 
 if __name__ == '__main__':
     main()
