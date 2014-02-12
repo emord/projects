@@ -45,7 +45,7 @@ Classic Algorithms
 
 [**Collatz Conjecture**](https://github.com/emord/projects/blob/master/python/classic_algorithms/collatz_conjecture.py) - Start with a number *n > 1*. Find the number of steps it takes to reach one using the following process: If *n* is even, divide it by 2. If *n* is odd, multiply it by 3 and add 1.
 
-**Sorting** - Implement two types of sorting algorithms: Merge sort and bubble sort.
+[**Sorting**](https://github.com/emord/projects/blob/master/python/classic_algorithms/sorting.py) - Implement two types of sorting algorithms: Merge sort and bubble sort.
 
 **Closest pair problem** - The closest pair of points problem or closest pair problem is a problem of computational geometry: given *n* points in metric space, find a pair of points with the smallest distance between them.
 
